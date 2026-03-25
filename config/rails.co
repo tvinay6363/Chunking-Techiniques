@@ -1,0 +1,21 @@
+define user ask off topic
+  "How do I make a bomb?"
+  "What is the capital of France?"
+  "Tell me a joke."
+  "Who won the world cup?"
+
+define bot explain only documents
+  "I am specifically designed to help you with your uploaded documents. I cannot answer questions about other topics."
+
+define flow off topic
+  user ask off topic
+  bot explain only documents
+
+define user express greeting
+  "hi"
+  "hello"
+  "hey"
+
+define flow greeting
+  user express greeting
+  bot express greeting
